@@ -38,41 +38,45 @@ export default function Header() {
           />
         </Link>
       </div>
-      <div className="twitter mr-5">
-        <Link href="/">
-          <Image
-            width='50'
-            height='50'
-            alt='twitter'
-            src='/twitter.png'
-          />
-        </Link>
-      </div>
-      <div className="discord mr-5">
-        <Link href="/">
-          <Image
-            width='50'
-            height='50'
-            alt='discord'
-            src='/discord.png'
-          />
-        </Link>
-      </div>
-      <div className="wallet">
-        <WalletMultiButton startIcon={null} className="btn-wallet">
-          <div className="relative">
-            {walletAddress ? (
-              <span >
-                {/* {shortWalletAddress} */}
-                Connected
-              </span>
-            ) : (
-              <span >
-                Connect
-              </span>
-            )}
-          </div>
-        </WalletMultiButton>
+      <div className="logo-right">
+        <div className="twitter mr-5">
+          <Link href="/">
+            <Image
+              width='50'
+              height='50'
+              alt='twitter'
+              src='/twitter.png'
+            />
+          </Link>
+        </div>
+        <div className="discord mr-5">
+          <Link href="/">
+            <Image
+              width='50'
+              height='50'
+              alt='discord'
+              src='/discord.png'
+            />
+          </Link>
+        </div>
+        <div className="wallet">
+          {/* <WalletMultiButton startIcon={null} className="btn-wallet">
+            <div className="relative btn-wallet-connect">
+              {walletAddress ? (
+                <span >
+                  Connected
+                </span>
+              ) : (
+                <span >
+                  Connect
+                </span>
+              )}
+            </div>
+          </WalletMultiButton> */}
+          <WalletMultiButton className="btn-connect btn-reverse m-auto">
+              Connect Wallet
+            </WalletMultiButton>
+        </div>
       </div>
     </header>
   );
