@@ -475,7 +475,7 @@ const MintMain = (props: MintMainProps) => {
   useEffect(() => {
     (function loop() {
       setTimeout(() => {
-        refreshCandyMachineState();
+        // refreshCandyMachineState();
         loop();
       }, 20000);
     })();

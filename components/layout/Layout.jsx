@@ -7,13 +7,13 @@ import Marquee from "./Marquee";
 export default function Layout({ children }) {
   return (
     <div className="layout">
-      <Marquee />
+      {/* <Marquee /> */}
       <Header />
       <div className="body">
         <main className="main">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
-      <Menu />
+      {/* <Menu /> */}
     </div>
   );
 }

@@ -30,13 +30,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Next.js CMv2 Demo</title>
+        <title>COCKADOODLES</title>
         <meta name="description" content="Candy Machine V2 Demo with Next.js" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content="/seo.png" />
       </Head>
       <ThemeProvider enableSystem={false} disableTransitionOnChange>
-        <MouseContextProvider>
+        {/* <MouseContextProvider> */}
           <WalletConnectionProvider>
             <WalletModalProvider>
               <WalletBalanceProvider>
@@ -60,9 +60,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
               </WalletBalanceProvider>
             </WalletModalProvider>
           </WalletConnectionProvider>
-        </MouseContextProvider>
+        {/* </MouseContextProvider> */}
       </ThemeProvider>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </>
   );
 };

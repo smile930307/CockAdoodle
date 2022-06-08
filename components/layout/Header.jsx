@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { useEffect } from "react";
 import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
@@ -5,6 +6,8 @@ import { useUserContext } from "../../context/UserContextProvider";
 import { FaWallet } from "react-icons/fa";
 import useWalletBalance from "../../context/WalletBalanceProvider";
 import siteData from "../../data/siteData";
+import Image from "next/image";
+import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 
 export default function Header() {
   const { menuOpen, setMenuOpen } = useUserContext();
@@ -15,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="menu">
+      {/* <div className="menu">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="space-y-1.5 block"
@@ -24,22 +27,48 @@ export default function Header() {
           <div className="w-8 sm:w-10 h-1 sm:h-1.5 bg-pageText"></div>
           <div className="w-8 sm:w-10 h-1 sm:h-1.5 bg-pageText"></div>
         </button>
-      </div>
+      </div> */}
       <div className="logo">
-        <Link href="/">{siteData.site}</Link>
+        <Link href="/">
+          <Image
+            width='314'
+            height='74'
+            alt='logo'
+            src='/logo.png'
+          />
+        </Link>
+      </div>
+      <div className="twitter mr-5">
+        <Link href="/">
+          <Image
+            width='50'
+            height='50'
+            alt='twitter'
+            src='/twitter.png'
+          />
+        </Link>
+      </div>
+      <div className="discord mr-5">
+        <Link href="/">
+          <Image
+            width='50'
+            height='50'
+            alt='discord'
+            src='/discord.png'
+          />
+        </Link>
       </div>
       <div className="wallet">
         <WalletMultiButton startIcon={null} className="btn-wallet">
-          <div className="relative ">
-            <FaWallet className="btn-wallet-icon inline-block" />
-
+          <div className="relative">
             {walletAddress ? (
-              <span className="absolute bottom-1 translate-y-full  -right-2 sm:right-1/2 sm:translate-x-1/2  text-3xs p-0 leading-4 text-center">
-                {shortWalletAddress}
+              <span >
+                {/* {shortWalletAddress} */}
+                Connected
               </span>
             ) : (
-              <span className="absolute  bottom-3 md:bottom-1 translate-y-full  right-1/2 translate-x-1/2  text-3xs p-0 leading-4 text-center">
-                Login
+              <span >
+                Connect
               </span>
             )}
           </div>
