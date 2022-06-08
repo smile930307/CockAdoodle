@@ -41,7 +41,7 @@
   @apply flex flex-row  bg-pageBG text-pageText border-pageText border-8 md:border-12 sticky top-0 z-10;
   background: #000000;
   padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-bottom: 10px;
 }
 
