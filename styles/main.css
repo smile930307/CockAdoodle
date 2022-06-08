@@ -1,0 +1,22 @@
+.sol-mint-btn{
+    width: 325px;
+    height: 80px;
+    background: linear-gradient(90deg, #8479DB 4.46%, #5AA3C9 100%);
+    border-radius: 6px;
+}
+
+.eth-mint-btn{
+    width: 325px;
+    height: 80px;
+    background: linear-gradient(90deg, #393939 0%, #141414 100%);
+    border-radius: 6px;
+}
+
+.bottom-btn{
+    box-sizing: border-box;
+    width: 402px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+}

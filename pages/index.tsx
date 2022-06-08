@@ -5,6 +5,8 @@ import * as anchor from "@project-serum/anchor";
 import useWalletBalance from "../context/WalletBalanceProvider";
 import { NFTCollection } from "../components/nft/NFTCollection";
 import { BsGithub } from "react-icons/bs";
+import Image from "next/image";
+
 
 const getCandyMachineId = (): anchor.web3.PublicKey | undefined => {
   try {
@@ -29,25 +31,48 @@ const Index: NextPage = () => {
   const { walletAddress } = useWalletBalance();
   return (
     <div className="">
-      <div className="min-h-[37vh] flex items-center justify-center py-16">
-        <div className="inline-block w-full">
-        </div>
+      <div className="min-h-[30vh] flex items-center justify-center py-16">
+        <Image
+            width='869'
+            height='102'
+            alt='logo'
+            src='/main-title.png'
+          />
       </div>
       <div className="min-h-[35vh] flex items-center justify-center py-16">
-        <div className="inline-block w-full">
-          <MintMain
-            candyMachineId={candyMachineId}
-            connection={connection}
-            txTimeout={txTimeout}
-            rpcHost={rpcHost}
+        <div className="eth-mint mr-10" style={{ textAlign: "center" }}>
+          <Image
+            width='150'
+            height='150'
+            alt='logo'
+            src='/ethereum-eth-logo.png'
           />
+          <div>
+            <button className="eth-mint-btn mt-5">Mint ETHEREUM edition</button>
+          </div>
+          
+        </div>
+        <div className="sol-mint ml-10" style={{ textAlign: "center" }}>
+          <Image
+            width='150'
+            height='150'
+            alt='logo'
+            src='/solana-sol-logo.png'
+          />
+          <div>
+            <button className="sol-mint-btn mt-5">Mint Solana edition</button>
+          </div>
         </div>
       </div>
+      <div style={{ textAlign: "center" }}>
+        <button className="bottom-btn">whats the inspiration!!??</button>
+      </div>
+      {/* 
       {walletAddress && (
         <div className="mt-10">
           <NFTCollection />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
