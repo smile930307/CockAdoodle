@@ -73,9 +73,12 @@ export default function Header() {
               )}
             </div>
           </WalletMultiButton> */}
-          <WalletMultiButton className="btn-connect btn-reverse m-auto">
+          <div>
+            <button className="wallet-connect-btn">{walletAddress ? 'Connected' : 'Connect'}</button>
+          </div>
+          {/* <WalletMultiButton className="btn-connect btn-reverse m-auto" style={{fontFamily: 'Bangers', fontStyle: 'normal',fontWeight: '400',fontSize: '36px',lineHeight: '38px' , color: '#FFFFFF'}}>
               Connect Wallet
-            </WalletMultiButton>
+            </WalletMultiButton> */}
         </div>
       </div>
     </header>

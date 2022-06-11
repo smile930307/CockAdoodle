@@ -31,7 +31,7 @@ const Index: NextPage = () => {
   const { walletAddress } = useWalletBalance();
   return (
     <div className="">
-      <div className="min-h-[30vh] flex items-center justify-center py-16" style={{fontFamily: 'myFirstFont', fontStyle: 'normal',fontWeight: '400',fontSize: '96px',lineHeight: '102px' , color: '#FFD700', WebkitTextStrokeWidth: '5px', WebkitTextStrokeColor: '#000000'}}>
+      <div className="min-h-[30vh] flex items-center justify-center py-16" style={{fontFamily: 'Bangers', fontStyle: 'normal',fontWeight: '400',fontSize: '96px',lineHeight: '102px' , color: '#FFD700', WebkitTextStrokeWidth: '5px', WebkitTextStrokeColor: '#000000'}}>
         wtf are you looking at!!
       </div>
       <div className="min-h-[35vh] flex items-center justify-center py-16">
@@ -43,7 +43,7 @@ const Index: NextPage = () => {
             src='/ethereum-eth-logo.png'
           />
           <div>
-            <button className="eth-mint-btn mt-5">Mint ETHEREUM edition</button>
+            <button className="eth-mint-btn mt-5" >Mint ETHEREUM edition</button>
           </div>
           
         </div>

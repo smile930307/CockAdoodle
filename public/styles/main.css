@@ -1,5 +1,5 @@
 @font-face {
-    font-family: myFirstFont;
+    font-family: Bangers;
     src: url(../font/Bangers-Regular.ttf);
 }
   
@@ -8,6 +8,13 @@
     height: 80px;
     background: linear-gradient(90deg, #8479DB 4.46%, #5AA3C9 100%);
     border-radius: 6px;
+
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 38px;
+    color: #ffffff;
 }
 
 .eth-mint-btn{
@@ -15,6 +22,13 @@
     height: 80px;
     background: linear-gradient(90deg, #393939 0%, #141414 100%);
     border-radius: 6px;
+
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 38px;
+    color: #ffffff;
 }
 
 .bottom-btn{
@@ -24,4 +38,28 @@
     background: rgba(255, 255, 255, 0.11);
     border: 1px solid #FFFFFF;
     border-radius: 6px;
+
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 38px;
+    color: #ffffff;
+}
+
+.wallet-connect-btn{
+    box-sizing: border-box;
+    width: 325px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius:6px;
+    /* text-align:center;
+    align-items: center; */
+    
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 38px;
+    color: #000000;
 }
