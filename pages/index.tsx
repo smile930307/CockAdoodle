@@ -31,13 +31,8 @@ const Index: NextPage = () => {
   const { walletAddress } = useWalletBalance();
   return (
     <div className="">
-      <div className="min-h-[30vh] flex items-center justify-center py-16">
-        <Image
-            width='869'
-            height='102'
-            alt='logo'
-            src='/main-title.png'
-          />
+      <div className="min-h-[30vh] flex items-center justify-center py-16" style={{fontFamily: 'myFirstFont', fontStyle: 'normal',fontWeight: '400',fontSize: '96px',lineHeight: '102px' , color: '#FFD700', WebkitTextStrokeWidth: '5px', WebkitTextStrokeColor: '#000000'}}>
+        wtf are you looking at!!
       </div>
       <div className="min-h-[35vh] flex items-center justify-center py-16">
         <div className="eth-mint mr-10" style={{ textAlign: "center" }}>

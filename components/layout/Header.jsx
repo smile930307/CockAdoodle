@@ -34,7 +34,7 @@ export default function Header() {
             width='314'
             height='74'
             alt='logo'
-            src='/logo.png'
+            src='/logo.svg'
           />
         </Link>
       </div>

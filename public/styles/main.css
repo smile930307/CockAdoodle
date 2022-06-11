@@ -1,3 +1,8 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Bangers-Regular.ttf);
+}
+  
 .sol-mint-btn{
     width: 325px;
     height: 80px;

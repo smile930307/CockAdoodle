@@ -13,8 +13,8 @@ import CustomCursor from "../components/cursor/CustomCursor";
 
 import "react-toastify/dist/ReactToastify.css";
 // Use require instead of import, and order matters
-require("../styles/globals.css");
-require("../styles/main.css");
+require("../public/styles/globals.css");
+require("../public/styles/main.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const WalletConnectionProvider = dynamic<{ children: ReactNode }>(
