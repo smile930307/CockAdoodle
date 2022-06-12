@@ -8,8 +8,6 @@ import { WalletBalanceProvider } from "../context/WalletBalanceProvider";
 import Layout from "../components/layout/Layout";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "next-themes";
-import MouseContextProvider from "../context/MouseContextProvider";
-import CustomCursor from "../components/cursor/CustomCursor";
 
 import "react-toastify/dist/ReactToastify.css";
 // Use require instead of import, and order matters
@@ -37,33 +35,30 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:image" content="/seo.png" />
       </Head>
       <ThemeProvider enableSystem={false} disableTransitionOnChange>
-        {/* <MouseContextProvider> */}
-          <WalletConnectionProvider>
-            <WalletModalProvider>
-              <WalletBalanceProvider>
-                <UserContextProvider>
-                  <Layout>
-                    <Component {...pageProps} />
-                  </Layout>
-                  <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                  />
-                  <ToastContainer />
-                </UserContextProvider>
-              </WalletBalanceProvider>
-            </WalletModalProvider>
-          </WalletConnectionProvider>
-        {/* </MouseContextProvider> */}
+        <WalletConnectionProvider>
+          <WalletModalProvider>
+            <WalletBalanceProvider>
+              <UserContextProvider>
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+                <ToastContainer />
+              </UserContextProvider>
+            </WalletBalanceProvider>
+          </WalletModalProvider>
+        </WalletConnectionProvider>
       </ThemeProvider>
-      {/* <CustomCursor /> */}
     </>
   );
 };

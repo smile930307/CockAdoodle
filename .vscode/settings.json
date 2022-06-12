@@ -8,5 +8,8 @@
         "titleBar.activeBackground": "#00a197",
         "titleBar.activeForeground": "#1f1f1f",
         "editorLineNumber.foreground": "#CCCCCC",
+      },
+      "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
       }
 }

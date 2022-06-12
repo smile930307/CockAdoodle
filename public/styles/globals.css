@@ -87,7 +87,7 @@
 
 /* Main Body Section (Footer is inside here) */
 .body {
-  @apply bg-pageBG relative flex-grow flex flex-col border-pageText  border-8 border-t-0 md:border-12 md:border-t-0 h-full;
+  @apply bg-pageBG relative flex-grow flex flex-col border-pageText h-full;
   background-image: url("/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -96,7 +96,7 @@
 }
 
 .main {
-  @apply text-pageText flex-grow h-full px-2 py-2 sm:px-4 md:px-6 sm:py-4 md:py-6;
+  @apply text-pageText flex-grow h-full;
 }
 
 .footer {
@@ -325,4 +325,9 @@
     height: 30px;
     opacity: 0;
   }
+}
+
+.px-30{
+  padding-left: 10em;
+  padding-right: 10em;
 }
