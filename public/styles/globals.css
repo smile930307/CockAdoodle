@@ -331,3 +331,8 @@
   padding-left: 10em;
   padding-right: 10em;
 }
+
+.ReactModal__Overlay{
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  z-index: 10;
+}
