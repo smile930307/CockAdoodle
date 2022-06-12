@@ -49,7 +49,7 @@ const Inspiration: NextPage = () => {
           width='100%'
           height='auto'         
           alt='logo'
-          src='/placeholder-image.png'
+          src='/images/placeholder-image.png'
         />
       </div>
 
@@ -61,7 +61,7 @@ const Inspiration: NextPage = () => {
           width='100%'
           height='auto'         
           alt='logo'
-          src='/placeholder-image.png'
+          src='/images/placeholder-image.png'
         />
       </div>
 
@@ -73,7 +73,7 @@ const Inspiration: NextPage = () => {
           width='100%'
           height='auto'         
           alt='logo'
-          src='/placeholder-image.png'
+          src='/images/placeholder-image.png'
         />
       </div>
 
@@ -85,7 +85,7 @@ const Inspiration: NextPage = () => {
           width='100%'
           height='auto'         
           alt='logo'
-          src='/placeholder-image.png'
+          src='/images/placeholder-image.png'
         />
       </div>
       <div className="flex items-center justify-center mt-20" style={{ fontFamily: 'Bangers', fontStyle: 'normal', fontWeight: '400', fontSize: '96px', lineHeight: '102px', color: '#FFD700', WebkitTextStrokeWidth: '5px', WebkitTextStrokeColor: '#000000' }}>

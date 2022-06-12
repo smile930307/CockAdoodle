@@ -31,10 +31,10 @@ export default function Header() {
       <div className="logo">
         <Link href="/">
           <Image
-            width='314'
-            height='74'
+            width={314}
+            height={74}
             alt='logo'
-            src='/logo.svg'
+            src='/images/logo.svg'
           />
         </Link>
       </div>
@@ -45,7 +45,7 @@ export default function Header() {
               width='50'
               height='50'
               alt='twitter'
-              src='/twitter.png'
+              src='/images/twitter.png'
             />
           </Link>
         </div>
@@ -55,7 +55,7 @@ export default function Header() {
               width='50'
               height='50'
               alt='discord'
-              src='/discord.png'
+              src='/images/discord.png'
             />
           </Link>
         </div>

@@ -52,17 +52,17 @@ const Index: NextPage = () => {
 
 	return (
 		<>
-			<div className="h-full">
+			<div className="h-full bg">
 				<div className="min-h-[30vh] flex items-center justify-center py-16" style={{ fontFamily: 'Bangers', fontStyle: 'normal', fontWeight: '400', fontSize: '96px', lineHeight: '102px', color: '#FFD700', WebkitTextStrokeWidth: '5px', WebkitTextStrokeColor: '#000000' }}>
 					wtf are you looking at!!
 				</div>
 				<div className="min-h-[35vh] flex items-center justify-center py-16">
 					<div className="eth-mint mr-10" style={{ textAlign: "center" }}>
 						<Image
-							width='150'
-							height='150'
+							width={150}
+							height={150}
 							alt='logo'
-							src='/ethereum-eth-logo.png' />
+							src='/images/ethereum-eth-logo.png' />
 						<div>
 							<button className="eth-mint-btn mt-5" onClick={() => { setIsOpen(true); }}>Mint ETHEREUM edition</button>
 						</div>
@@ -70,10 +70,10 @@ const Index: NextPage = () => {
 					</div>
 					<div className="sol-mint ml-10" style={{ textAlign: "center" }}>
 						<Image
-							width='150'
-							height='150'
+							width={150}
+							height={150}
 							alt='logo'
-							src='/solana-sol-logo.png' />
+							src='/images/solana-sol-logo.png' />
 						<div>
 							<button className="sol-mint-btn mt-5">Mint Solana edition</button>
 						</div>
@@ -95,18 +95,10 @@ const Index: NextPage = () => {
 				// onAfterOpen={afterOpenModal}
 				// onRequestClose={closeModal}
 				style={customStyles}  
-				contentLabel="Example Modal"
 			>
 				<h2>Hello</h2>
 				<button onClick={() => { setIsOpen(false); }}>close</button>
 				<div>I am a modal</div>
-				<form>
-					<input />
-					<button>tab navigation</button>
-					<button>stays</button>
-					<button>inside</button>
-					<button>the modal</button>
-				</form>
 			</Modal>
 		</>
 	);
