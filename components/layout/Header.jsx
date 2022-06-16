@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useUserContext } from "../../context/UserContextProvider";
@@ -8,79 +8,55 @@ import useWalletBalance from "../../context/WalletBalanceProvider";
 import siteData from "../../data/siteData";
 import Image from "next/image";
 import { loadGetInitialProps } from "next/dist/shared/lib/utils";
+import Modal from "../Modal";
 
 export default function Header() {
-  const { menuOpen, setMenuOpen } = useUserContext();
-  const { walletAddress } = useWalletBalance();
+	const { menuOpen, setMenuOpen } = useUserContext();
+	const { walletAddress } = useWalletBalance();
 
-  const shortWalletAddress =
-    walletAddress.slice(0, 4) + ".." + walletAddress.slice(-4);
+	const [status, setStatus] = useState({
+		openMenu:   false,
+		isModal:    false
+	});
 
-  return (
-    <header className="header">
-      {/* <div className="menu">
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="space-y-1.5 block"
-        >
-          <div className="w-8 sm:w-10 h-1 sm:h-1.5 bg-pageText"></div>
-          <div className="w-8 sm:w-10 h-1 sm:h-1.5 bg-pageText"></div>
-          <div className="w-8 sm:w-10 h-1 sm:h-1.5 bg-pageText"></div>
-        </button>
-      </div> */}
-      <div className="logo">
-        <Link href="/">
-          <Image
-            width={314}
-            height={74}
-            alt='logo'
-            src='/images/logo.svg'
-          />
-        </Link>
-      </div>
-      <div className="logo-right">
-        <div className="twitter mr-5">
-          <Link href="/">
-            <Image
-              width='50'
-              height='50'
-              alt='twitter'
-              src='/images/twitter.png'
-            />
-          </Link>
-        </div>
-        <div className="discord mr-5">
-          <Link href="/">
-            <Image
-              width='50'
-              height='50'
-              alt='discord'
-              src='/images/discord.png'
-            />
-          </Link>
-        </div>
-        <div className="wallet">
-          {/* <WalletMultiButton startIcon={null} className="btn-wallet">
-            <div className="relative btn-wallet-connect">
-              {walletAddress ? (
-                <span >
-                  Connected
-                </span>
-              ) : (
-                <span >
-                  Connect
-                </span>
-              )}
-            </div>
-          </WalletMultiButton> */}
-          <div>
-            <button className="wallet-connect-btn">{walletAddress ? 'Connected' : 'Connect'}</button>
-          </div>
-          {/* <WalletMultiButton className="btn-connect btn-reverse m-auto" style={{fontFamily: 'Bangers', fontStyle: 'normal',fontWeight: '400',fontSize: '36px',lineHeight: '38px' , color: '#FFFFFF'}}>
-              Connect Wallet
-            </WalletMultiButton> */}
-        </div>
-      </div>
-    </header>
-  );
+	const shortWalletAddress = walletAddress.slice(0, 4) + ".." + walletAddress.slice(-4);
+
+	const onClose = () => {
+		setStatus({...status, isModal: !status.isModal})
+	}
+
+	useEffect(()=>{
+		setStatus({openMenu: false});
+	}, []);
+
+	return (
+		<header className={`header ${status.openMenu?"open-menu":""}`}>
+			<Link href="/">
+				<img className="logo" alt='logo' src='/images/logo.svg' />
+			</Link>
+			<span className="hamburger" onClick={()=>setStatus({...status, openMenu: !status.openMenu})}>
+				<span></span>
+			</span>
+			<ul className="menu">
+				<li>
+					<button onClick={()=>setStatus({...status, isModal:true})}>
+						<img alt='discord' src='/images/discord.png' />
+					</button>
+				</li>
+				<li>
+					<Link href="/">
+						<img alt='twitter' src='/images/twitter.png' />
+					</Link>
+				</li>
+				<button className="btn btn-white">{walletAddress ? 'Connected' : 'Connect Wallet'}</button>
+			</ul>
+			<Modal isOpened={status.isModal} onClose={onClose}>
+				<div className="mint-box">
+					<h2 className="warning">We don't have a fucking discord!</h2>
+					<p>You can follow our twitter btw :)</p>
+					<button className="btn btn-info round btn-block middle">Follow<img width="30" alt='twitter' src='/images/twitter.png' /></button>
+				</div>
+			</Modal>
+		</header>
+	);
 }

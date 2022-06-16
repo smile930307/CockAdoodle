@@ -4,8 +4,22 @@
 /* Inter Font Family 400, 700, 900 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap");
 
+@font-face {
+  font-family: Bangers;
+  src: url(../font/Bangers-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 * {
-  font-family: "Inter", "sans-serif";
+  box-sizing: border-box;
+  font-family: Bangers;
+  font-size: 36px;
+  line-height: 1em;
 }
 
 /* Variables */
@@ -31,88 +45,38 @@
   --scope: #ff1717;
 }
 
-/* Layout */
-.layout {
-  @apply flex flex-col min-h-screen relative;
-}
-
-/* Header with black  */
-.header {
-  @apply flex flex-row  bg-pageBG text-pageText border-pageText border-8 md:border-12 sticky top-0 z-10;
-  background: #000000;
-  height: 140px;
-}
-
-/* Have each div in header take up 1/3 space with flex items center */
-.header > div {
-  @apply flex items-center;
-}
-
-/* Header Menu Button */
-.btn-menu {
-  @apply justify-center font-extrabold md:text-xl hover:underline;
-}
-
-/* Header Centered Logo */
-.header > .logo {
-  @apply justify-center font-extrabold text-lg sm:text-3xl leading-5 text-center hover:underline;
-  flex: 1;
-  justify-content: flex-start;
-}
-
-/* Header Wallet Connect Button */
-.header > .wallet {
-  @apply justify-end;
-}
-
-.header > .logo-right{
-  flex: 1;
-  gap: 70px;
-}
-
-.btn-wallet {
-  @apply bg-transparent flex flex-col font-sans text-pageText rounded-none font-normal text-2xs p-0 !important;
-  background: white;
-}
-
-.btn-wallet-connect {
-  background: white;
-}
-
-.btn-wallet-icon {
-  @apply bg-transparent font-sans text-pageText rounded-none font-extrabold text-lg sm:text-xl  p-0 !important;
-}
-
-/* Main Body Section (Footer is inside here) */
-.body {
-  @apply bg-pageBG relative flex-grow flex flex-col border-pageText h-full;
-  
-}
-
-.main {
-  @apply text-pageText flex-grow h-full;
-}
-
-.footer {
-  @apply bg-pageBG text-pageText p-4;
-}
-
-.footer-copy {
-  @apply text-sm font-semibold;
-}
-
-/* Wallet Overrides */
-.footer-button {
-  @apply flex flex-col justify-end;
-}
-.footer-button > .wallet-adapter-dropdown > .wallet-adapter-dropdown-list {
-  top: -600% !important;
-  right: 0% !important;
+a, button {
   display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn-wallet--footer {
-  @apply inline-block font-sans text-pageText hover:bg-pageText hover:text-pageBG rounded-none  items-end h-fit font-normal text-2xs leading-3 p-0 !important;
+strong {
+  font-weight: 300;
+  color: #E90F0F !important;
+}
+
+.show {
+  display: initial !important;
+}
+
+.danger {
+  color: #E90F0F !important;
+}
+
+.warning {
+  color: rgb(255, 215, 0) !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Menu positioned absolute to take up whole page */

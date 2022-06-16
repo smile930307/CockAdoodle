@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Menu from "../menu/Menu";
-import Marquee from "./Marquee";
+import Marquee from "./Marquee"; 
 
 export default function Layout({ children }) {
   return (
