@@ -132,7 +132,7 @@ const Index: NextPage = () => {
 					<div className="mint-box">
 						<h2 className="warning">Alright..</h2>
 						<p>You can mint another cock :)</p>
-						<button className="btn btn-info round btn-block middle">Share<img width="30" alt='twitter' src='/images/twitter.png' /></button>
+						<button className="btn btn-info round btn-block middle">Share<img width="30" alt="twitter" src="/images/twitter.png" /></button>
 						<button className="btn btn-graorange round btn-block" onClick={()=>setStatus({...status, modalContent:"fourth"})}>Mint Again</button>
 					</div>
 				)}
