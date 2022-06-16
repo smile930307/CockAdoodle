@@ -120,9 +120,9 @@ const Index: NextPage = () => {
 						<button className="btn btn-mintnow round btn-block" style={{position: "relative"}}>
 							Mint now
 							<div className="bar">
-								<span className={status.bar===0 ? 'active':''}></span>
-								<span className={status.bar===1 ? 'active':''}></span>
-								<span className={status.bar===2 ? 'active':''}></span>
+								<span className={status.bar===0 ? "active":""}></span>
+								<span className={status.bar===1 ? "active":""}></span>
+								<span className={status.bar===2 ? "active":""}></span>
 							</div>
 						</button>
 					</div>
