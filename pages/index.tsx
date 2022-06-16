@@ -4,7 +4,7 @@ import { NextPage } from "next"
 import * as anchor from "@project-serum/anchor"
 import useWalletBalance from "../context/WalletBalanceProvider"
 import React from "react"
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 import Modal from "../components/Modal"
 
 const getCandyMachineId = (): anchor.web3.PublicKey | undefined => {
@@ -69,7 +69,7 @@ const Index: NextPage = () => {
 					<h1>Wft are you looking at!!</h1>
 					<div className="edition-container">
 						<div>
-							<img alt='ethereum-logo' src='/images/ethereum-eth-logo.png' />
+							<img alt="ethereum-logo" src="/images/ethereum-eth-logo.png" />
 							<button 
 								className="btn btn-black"
 								onClick={()=>setStatus({...status, isModalOpened:true, token: "ether"})}
@@ -78,14 +78,14 @@ const Index: NextPage = () => {
 							</button>
 						</div>
 						<div>
-							<img alt='solana-logo' src='/images/solana-sol-logo.png' />
+							<img alt="solana-logo" src="/images/solana-sol-logo.png" />
 							<button 
 								className="btn btn-primary"
 								onClick={()=>setStatus({...status, isModalOpened:true, token: "solana"})}
 							>Mint Solana edition</button>
 						</div>
 						<div>
-							<button className="btn btn-white-opacity" onClick={() => { router.push('/inspiration'); }}>whats the inspiration!!??</button>
+							<button className="btn btn-white-opacity" onClick={() => { router.push("/inspiration"); }}>whats the inspiration!!??</button>
 						</div>
 					</div>
 				</div>
@@ -115,14 +115,14 @@ const Index: NextPage = () => {
 					<div className="mint-box">
 						<h2 className="warning">Mint Successful!</h2>
 						<p>Share on twitter and get another free min</p>
-						<button className="btn btn-info round btn-block middle" onClick={()=>setStatus({...status, modalContent:"third"})}>Share<img width="30" alt='twitter' src='/images/twitter.png' /></button>
+						<button className="btn btn-info round btn-block middle" onClick={()=>setStatus({...status, modalContent:"third"})}>Share<img width="30" alt="twitter" src="/images/twitter.png" /></button>
 						<button className="btn btn-info round btn-block">View on opensea</button>
 						<button className="btn btn-mintnow round btn-block" style={{position: "relative"}}>
 							Mint now
 							<div className="bar">
-								<span className={status.bar===0 ? `active`:''}></span>
-								<span className={status.bar===1 ? `active`:''}></span>
-								<span className={status.bar===2 ? `active`:''}></span>
+								<span className={status.bar===0 ? 'active':''}></span>
+								<span className={status.bar===1 ? 'active':''}></span>
+								<span className={status.bar===2 ? 'active':''}></span>
 							</div>
 						</button>
 					</div>
@@ -139,7 +139,7 @@ const Index: NextPage = () => {
 					<div className="mint-box">
 						<h2 className="warning">You're through!</h2>
 						<p>Mint successful btw, now get tf out and cause chaos!!</p>
-						<button className="btn btn-info round btn-block middle">Share<img width="30" alt='twitter' src='/images/twitter.png' /></button>
+						<button className="btn btn-info round btn-block middle">Share<img width="30" alt="twitter" src="/images/twitter.png" /></button>
 						<button className="btn btn-info round btn-block">View on opensea</button>
 					</div>
 				)}
