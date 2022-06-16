@@ -137,7 +137,7 @@ const Index: NextPage = () => {
 				)}
 				{status.modalContent==="fourth"&&(
 					<div className="mint-box">
-						<h2 className="warning">You're through!</h2>
+						<h2 className="warning">You&apos; re through!</h2>
 						<p>Mint successful btw, now get tf out and cause chaos!!</p>
 						<button className="btn btn-info round btn-block middle">Share<img width="30" alt="twitter" src="/images/twitter.png" /></button>
 						<button className="btn btn-info round btn-block">View on opensea</button>
