@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { NextPage } from "next"
 
-import Image from "next/image"
 import * as anchor from "@project-serum/anchor"
 import useWalletBalance from "../context/WalletBalanceProvider"
 import React from "react"
