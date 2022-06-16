@@ -52,7 +52,7 @@ export default function Header() {
 			</ul>
 			<Modal isOpened={status.isModal} onClose={onClose}>
 				<div className="mint-box">
-					<h2 className="warning">We don't have a fucking discord!</h2>
+					<h2 className="warning">We don&apos;t have a fucking discord!</h2>
 					<p>You can follow our twitter btw :)</p>
 					<button className="btn btn-info round btn-block middle">Follow<img width="30" alt='twitter' src='/images/twitter.png' /></button>
 				</div>
